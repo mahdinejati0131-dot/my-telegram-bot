@@ -3,7 +3,9 @@ import telebot
 TOKEN = '8800613146:AAEaDznhFmIiOM_iJBAdOkqCBDlsV8r96Iw'
 bot = telebot.TeleBot(TOKEN)
 
-# آیدی فایل شما
+# پاک کردن وب‌هوک قبلی برای رفع خطا
+bot.delete_webhook()
+
 TECH_FILE_ID = 'AgADbQsAArcL2VE'
 
 @bot.message_handler(commands=['start'])
