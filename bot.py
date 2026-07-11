@@ -1,7 +1,6 @@
 import telebot
-import os
 
-TOKEN = '8800613146:AAEaDznhFmIiOM_iJBAdOkqCBDlsV8r96Iw'
+TOKEN = '8800613146:AAGQQY2W617D6pbWyCVpo1Lt0OnNkQKkJMM'
 bot = telebot.TeleBot(TOKEN)
 
 TECH_FILE_ID = 'AgADbQsAArcL2VE'
@@ -14,7 +13,4 @@ def start(message):
 def send_tech(message):
     bot.send_document(message.chat.id, TECH_FILE_ID)
 
-# حذف polling و استفاده از روش ساده‌تر برای سرور
-if __name__ == "__main__":
-    bot.remove_webhook()
-    bot.polling(none_stop=True)
+bot.infinity_polling()
